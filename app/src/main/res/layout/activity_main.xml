@@ -36,15 +36,15 @@
                 android:layout_height="wrap_content"
                 android:text="20 April 2012, 20:08 PM"
                 android:textSize="14sp" />
-        </LinearLayout> 
+        </LinearLayout>
 
         // OverView container
         <LinearLayout
             android:id="@+id/overviewContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_centerInParent="true">
 
             <TextView
                 android:id="@+id/status"
@@ -86,10 +86,10 @@
                     android:text="Max Temp : 5:05PM" />
             </LinearLayout>
 
-        </LinearLayout> 
+        </LinearLayout>
 
         // Details container
-        <LinearLayout 
+        <LinearLayout
             android:id="@+id/detailsContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -103,6 +103,7 @@
                 android:weightSum="3">
 
                 //Sunrise
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -135,9 +136,12 @@
                         android:textSize="14sp" />
                 </LinearLayout>
 
-                <Space android:layout_width="10dp" android:layout_height="wrap_content"/>
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
 
                 // Sunset
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -170,9 +174,12 @@
                         android:textSize="14sp" />
                 </LinearLayout>
 
-                <Space android:layout_width="10dp" android:layout_height="wrap_content"/>
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
 
                 // Wind
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -205,48 +212,18 @@
                         android:textSize="14sp" />
                 </LinearLayout>
             </LinearLayout>
+
             <Space
                 android:layout_width="wrap_content"
-                android:layout_height="10dp"/>
+                android:layout_height="10dp" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:weightSum="3">
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="#3CF1EBF1"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="8dp">
-
-                    <ImageView
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:src="@drawable/sunrise"
-                        app:tint="#FFFFFF" />
-
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="5dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Sunrise"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="06:40 AM"
-                        android:textSize="14sp" />
-                </LinearLayout> //Sunrise
-
-                <Space android:layout_width="10dp" android:layout_height="wrap_content"/>
+                //Pressure
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -260,7 +237,7 @@
                     <ImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:src="@drawable/sunrise"
+                        android:src="@drawable/pressure"
                         app:tint="#FFFFFF" />
 
                     <Space
@@ -270,7 +247,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Sunrise"
+                        android:text="Pressure"
                         android:textSize="12sp" />
 
                     <TextView
@@ -278,9 +255,14 @@
                         android:layout_height="wrap_content"
                         android:text="06:40 AM"
                         android:textSize="14sp" />
-                </LinearLayout> // Sunset
+                </LinearLayout>
+                //Sunrise
 
-                <Space android:layout_width="10dp" android:layout_height="wrap_content"/>
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+
+                //Humidity
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -294,7 +276,7 @@
                     <ImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:src="@drawable/sunrise"
+                        android:src="@drawable/humidity"
                         app:tint="#FFFFFF" />
 
                     <Space
@@ -304,7 +286,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Sunrise"
+                        android:text="Humidity"
                         android:textSize="12sp" />
 
                     <TextView
@@ -312,9 +294,50 @@
                         android:layout_height="wrap_content"
                         android:text="06:40 AM"
                         android:textSize="14sp" />
-                </LinearLayout> // Wind
+                </LinearLayout>
+                // Sunset
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+
+                //Created by
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#3CF1EBF1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/info"
+                        app:tint="#FFFFFF" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="5dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Created by"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Amir Salimi"
+                        android:textSize="14sp" />
+                </LinearLayout>
+                // Wind
             </LinearLayout>
-        </LinearLayout> 
+
+        </LinearLayout>
 
     </RelativeLayout>
 
